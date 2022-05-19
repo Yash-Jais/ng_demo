@@ -1,0 +1,58 @@
+<h1 class="heading">Hello welcome to my WebPage</h1>
+<h1>{{ title }}</h1>
+<app-trending></app-trending>
+
+<!-- <button (click)="onbtnclick()">Read More</button>
+
+<button *ngIf="!userLoggedIn">Login</button>
+<button *ngIf="userLoggedIn">Logout</button>
+<ul>
+    <li style="text-align:left" *ngFor="let car of cars">{{car}}</li>
+</ul> -->
+<!-- 
+<ul class="second"  *ngFor="let car of cars">
+    <li>{{ car }}</li>
+    <li>{{car}}</li>
+</ul> -->
+
+<div *ngIf="userLoggedIn">
+    <button *ngIf="userLoggedIn">Logout</button>
+    <button *ngIf="!userLoggedIn">Login</button>
+    
+    <table border="1" cellspacing="0" cellPadding="30" align="center">
+        <tr>
+            <th>Sr.No.</th>
+            <th>Name of Car</th>
+            <th>Color of Car</th>
+            <th>Speed of Car</th>
+        </tr>
+        <tr *ngFor="let car of Cars">
+            <td>{{car.nos}}</td>
+            <td>{{car.name}}</td>
+            <td>{{car.color}}</td>
+            <td>{{car.speed}}</td>
+        </tr>
+    </table>
+</div>
+
+<h1 [ngStyle]="{color: getColor()}">Hello I am in Relfor</h1>
+<!-- <button *[ngStyle]="{color: getColor()}">click to see magic</button> -->
+<!-- <h1 [ngClass]="{highlight: highlightElement()}">Hello, a month before, I was in webgurukul</h1> -->
+
+<h1 appHighlighter>Hello this is color changing effect</h1>
+
+<select (change)="setValue($event)">
+    <option value="">Select any one car</option>
+    <option value="audi">Audi</option>
+    <option value="ferari">ferari</option>
+    <option value="jaguare">Jaguare</option>
+    <option value="bmw">BMW</option>
+    <option value="another">Another</option>
+</select>
+<div [ngClass]="{attract: attractElement()}" [ngSwitch]="choose">
+    <h3 *ngSwitchCase="'audi'">This is Audi</h3> 
+    <h3 *ngSwitchCase="'ferari'">This is Ferari</h3> 
+    <h3 *ngSwitchCase="'jaguare'">This is Jaguare</h3> 
+    <h3 *ngSwitchCase="'bmw'">This is BMW</h3>
+    <h3 *ngSwitchDefault="'another'">This is not your request</h3>
+</div>

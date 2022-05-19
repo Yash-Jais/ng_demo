@@ -1,0 +1,11 @@
+*{text-align: center;}
+.heading{color: #0f0;background-color: #000;}
+.second li{text-align: left;}
+.highlight{
+    color: #f00;
+    background-color: #000;
+}
+.attract h3{
+    background-color: #0f0;
+    padding: 20px 0;;
+}
